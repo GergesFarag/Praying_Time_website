@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <script
+      type="module"
+      src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./img/muslim.png" type="image/x-icon" />
+    <title>Praying Time</title>
+  </head>
+  <body dir="rtl">
+    <div class="container-fluid">
+      <!-- Start The Heading Data -->
+      <div class="row heading-data">
+        <div class="toggle-buttons w-25 pt-3">
+          <input
+            type="radio"
+            class="btn-check"
+            name="options-base"
+            id="option5"
+            autocomplete="off"
+            value="index.html"
+            checked
+          />
+          <label class="btn" for="option5">مسلم</label>
+          <input
+            type="radio"
+            class="btn-check"
+            name="options-base"
+            id="option6"
+            autocomplete="off"
+            value="index2.html"
+            onchange="navigateTo(value)"
+          />
+          <label class="btn" for="option6">مسيحي</label>
+        </div>
+        <h2 class="p-3 title-name">القاهره</h2>
+        <hr />
+        <h4 class="p-3 date">السبت 29 يونيو 2024</h4>
+      </div>
+      <!-- End The Heading Data -->
+      <!-- Start The Schedule Data -->
+      <div class="container">
+        <div class="row middle-data mt-5">
+          <!-- Card 1 Start -->
+          <div class="col p-2 mt-3">
+            <div class="card mb-3" style="max-width: 18rem">
+              <div class="card-header" id="Fajr">صلاة الفجر</div>
+              <div class="card-body">
+                <h5 class="card-title fs-2">5:00 ص</h5>
+              </div>
+            </div>
+          </div>
+          <!-- Card 1 End -->
+          <!-- Card 2 Start -->
+          <div class="col p-2 mt-3">
+            <div class="card mb-3" style="max-width: 18rem">
+              <div class="card-header" id="Dhuhr">صلاة الظهر</div>
+              <div class="card-body">
+                <h5 class="card-title fs-2">6:00 ص</h5>
+              </div>
+            </div>
+          </div>
+          <!-- Card 2 End -->
+          <!-- Card 3 Start -->
+          <div class="col p-2 mt-3">
+            <div class="card mb-3" style="max-width: 18rem">
+              <div class="card-header" id="Asr">صلاة العصر</div>
+              <div class="card-body">
+                <h5 class="card-title fs-2">6:00 ص</h5>
+              </div>
+            </div>
+          </div>
+          <!-- Card 3 End -->
+          <!-- Card 4 Start -->
+          <div class="col p-2 mt-3">
+            <div class="card mb-3" style="max-width: 18rem">
+              <div class="card-header" id="Maghrib">صلاة المغرب</div>
+              <div class="card-body">
+                <h5 class="card-title fs-2">6:00 ص</h5>
+              </div>
+            </div>
+          </div>
+          <!-- Card 4 End -->
+          <!-- Card 5 Start -->
+          <div class="col p-2 mt-3">
+            <div class="card mb-3" style="max-width: 18rem">
+              <div class="card-header" id="Isha">صلاة العشاء</div>
+              <div class="card-body">
+                <h5 class="card-title fs-2">6:00 ص</h5>
+              </div>
+            </div>
+          </div>
+          <!-- Card 5 End -->
+        </div>
+        <div class="row mt-5 bottom-data">
+          <div class="col d-flex justify-content-end">
+            <p class="city-para text-start">اختر المدينة</p>
+          </div>
+          <div class="col d-flex justify-content-start">
+            <div class="dropdown">
+              <button
+                class="btn btn-secondary dropdown-toggle px-3 py-2"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                القاهره
+              </button>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#" name="Qāhirah">القاهره</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#" name="Riyāḑ">الرياض</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#" name="Makkah"
+                    >مكة المكرمة</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="content">
+      <!-- Content will be dynamically loaded here -->
+    </div>
+    <script src="./node_modules/axios/dist/axios.min.js"></script>
+    <script type="module" src="./script/script.js"></script>
+    <script>
+      function navigateTo(pageId) {
+        const pageUrl = `${pageId}`;
+        window.location.href = pageUrl;
+      }
+    </script>
+  </body>
+</html>

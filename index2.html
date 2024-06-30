@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/style2.css" />
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <script
+      type="module"
+      src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./img/christ.png" type="image/x-icon">
+    <title>Praying Time</title>
+  </head>
+  <body dir="rtl">
+    <div class="container-fluid">
+      <!-- Start The Heading Data -->
+      <div class="row heading-data">
+        <div class="toggle-buttons w-25 pt-3">
+          <input
+            type="radio"
+            class="btn-check"
+            name="options-base"
+            id="option5"
+            autocomplete="off"
+            value="index.html"
+            onchange="navigateTo(value)"
+          />
+          <label class="btn" for="option5">مسلم</label>
+          <input
+            type="radio"
+            class="btn-check"
+            name="options-base"
+            id="option6"
+            autocomplete="off"
+            value="index.html"
+            onchange="navigateTo(value)"
+            checked
+          />
+          <label class="btn" for="option6">مسيحي</label>
+        </div>
+        <h2 class="p-3 title-name">القاهره</h2>
+        <hr />
+        <h4 class="p-3 date">السبت 29 يونيو 2024</h4>
+      </div>
+      <!-- End The Heading Data -->
+      <!-- Start The Schedule Data -->
+      <div class="container">
+        <div class="row mt-3 row1">
+          <!-- Card 1 Start -->
+          <div class="col p-2 mt-3">
+            <div class="card mb-3" style="max-width: 18rem">
+              <div class="card-header" id="Morning">صلاة باكر</div>
+              <div class="card-body">
+                <h5 class="card-title fs-2">5:00 ص</h5>
+              </div>
+            </div>
+          </div>
+          <!-- Card 1 End -->
+          <!-- Card 2 Start -->
+          <div class="col p-2 mt-3">
+            <div class="card mb-3" style="max-width: 18rem">
+              <div class="card-header" id="Mid-Morning">صلاة الساعة الثالثة</div>
+              <div class="card-body">
+                <h5 class="card-title fs-2">6:00 ص</h5>
+              </div>
+            </div>
+          </div>
+          <!-- Card 2 End -->
+          <!-- Card 3 Start -->
+          <div class="col p-2 mt-3">
+            <div class="card mb-3" style="max-width: 18rem">
+              <div class="card-header" id="Noon">صلاة الساعة السادسة</div>
+              <div class="card-body">
+                <h5 class="card-title fs-2">6:00 ص</h5>
+              </div>
+            </div>
+          </div>
+          <!-- Card 3 End -->
+          <!-- Card 4 Start -->
+          <div class="col p-2 mt-3">
+            <div class="card mb-3" style="max-width: 18rem">
+              <div class="card-header" id="Afternoon">صلاة الساعة التاسعه</div>
+              <div class="card-body">
+                <h5 class="card-title fs-2">6:00 ص</h5>
+              </div>
+            </div>
+          </div>
+          <!-- Card 4 End -->
+        </div>
+        <div class="row mt-3 row2">
+          <!-- Card 5 Start -->
+          <div class="col-4 p-2 mt-3 column">
+            <div class="card mb-3">
+              <div class="card-header" id="Evening">صلاة الساعة الحادية عشر (الغروب)</div>
+              <div class="card-body">
+                <h5 class="card-title fs-2">6:00 ص</h5>
+              </div>
+            </div>
+          </div>
+          <!-- Card 5 End -->
+          <!-- Card 6 Start -->
+          <div class="col-4 p-2 mt-3 column">
+            <div class="card mb-3" >
+              <div class="card-header" id="Night">صلاة الساعة الثانية عشر (النوم)</div>
+              <div class="card-body">
+                <h5 class="card-title fs-2">6:00 ص</h5>
+              </div>
+            </div>
+          </div>
+          <!-- Card 6 End -->
+           <!-- Card 7 Start -->
+          <div class="col-4 p-2 mt-3 column">
+            <div class="card mb-3">
+              <div class="card-header" id="Mid Night">صلاة نصف الليل</div>
+              <div class="card-body">
+                <h5 class="card-title fs-2">6:00 ص</h5>
+              </div>
+            </div>
+          </div>
+          <!-- Card 7  End -->
+        </div>
+      </div>
+    </div>
+    <div id="content">
+        <!-- Content will be dynamically loaded here -->
+    </div>
+    <script src="./node_modules/axios/dist/axios.min.js"></script>
+    <script type="module" src="./script/script2.js"></script>
+    <script>
+        function navigateTo(pageId) {
+          const pageUrl = `${pageId}`;
+          window.location.href = pageUrl;
+        }
+      </script>
+  </body>
+</html>

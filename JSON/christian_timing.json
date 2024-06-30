@@ -1,0 +1,9 @@
+{
+    "Morning": "06:00 AM",
+    "Mid-Morning": "09:00 AM",
+    "Noon": "12:00 PM",
+    "Afternoon": "03:00 PM",
+    "Evening": "06:00 PM",
+    "Night": "09:00 PM",
+    "Mid Night":"12:00 AM"
+}
