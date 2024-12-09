@@ -1,6 +1,6 @@
 # Praying Time Website
 
-Brief description or introduction to your project.
+It's an application for using Axios as API Wrapper for Frontend and appling the main functionalities of Javascript in useful task.
 
 ## How To Use It
 
